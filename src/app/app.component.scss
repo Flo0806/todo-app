@@ -1,0 +1,18 @@
+@import "../assets/styles/variables";
+
+.container {
+  margin: 0 auto;
+  width: 360px;
+  min-height: 200px;
+  background-color: $color-container;
+  border: 1px solid $color-container-border-color;
+  border-radius: $border-radius;
+  padding: 1rem;
+
+  h1 {
+    font-size: 30px;
+    color: $text-color;
+    text-align: center;
+    margin-top: 0.25rem;
+  }
+}

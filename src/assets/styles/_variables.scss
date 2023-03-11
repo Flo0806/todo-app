@@ -1,0 +1,39 @@
+$text-color: #e8e8e8;
+$text-color-light: $text-color;
+$text-color-secondary: #550f55;
+$color-background: #3d3d3d;
+$color-container: #1e1e1e;
+$color-container-border-color: #787878;
+$text-color-primary: $text-color;
+$text-color-secondary: #999999;
+$selected-item-color: #444444;
+$selected-item-border-color: #91cf45;
+$button-primary-background: linear-gradient(#872b87, #550f55);
+$button-hover-background: linear-gradient(#9a4d9a, #753475);
+$button-disabled-background: linear-gradient(#bc94bc, #735673);
+
+$border-radius: 8px;
+
+@mixin primary-gradient() {
+  box-sizing: border-box;
+  background: $button-primary-background;
+  color: $text-color-light;
+
+  &:hover {
+    background: $button-hover-background;
+  }
+}
+
+@mixin secondary-gradient() {
+  box-sizing: border-box;
+  border-color: #550f55;
+  background-color: transparent;
+  color: $text-color-light;
+
+  &:hover {
+    background: $button-hover-background;
+    border-width: 0;
+    border: none;
+    color: $text-color-light;
+  }
+}

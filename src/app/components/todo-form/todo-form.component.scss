@@ -1,0 +1,16 @@
+@import "../../../assets/styles/variables";
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+
+  input[type="text"] {
+    height: 36px;
+    width: 100%;
+    border: 1px solid $color-container-border-color;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

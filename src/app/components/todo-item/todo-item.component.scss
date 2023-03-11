@@ -1,0 +1,55 @@
+@import "../../../assets/styles/variables";
+
+.container {
+  position: relative;
+  color: $text-color;
+  height: 40px;
+  padding: 5px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  cursor: pointer;
+
+  &.done {
+    * {
+      text-decoration: line-through;
+      pointer-events: none;
+      opacity: 0.66;
+    }
+  }
+
+  &:hover {
+    background-color: $selected-item-color;
+  }
+
+  &.active {
+    border-color: $selected-item-border-color;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 18px;
+    width: calc(100% - 10px - 60px);
+  }
+
+  .description {
+    font-style: italic;
+    font-size: 12px;
+    color: $text-color-secondary;
+  }
+
+  .btn-done {
+    background: linear-gradient(#1e751c, #094d08);
+    width: 60px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: $text-color;
+    cursor: pointer;
+
+    &:hover {
+      background: linear-gradient(#3ead3c, #20831e);
+    }
+  }
+}

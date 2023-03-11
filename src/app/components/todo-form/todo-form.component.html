@@ -1,0 +1,29 @@
+<div class="container">
+  <input type="text" placeholder="Title..." [(ngModel)]="titleValue" />
+  <input
+    type="text"
+    placeholder="Description..."
+    [(ngModel)]="descriptionValue"
+  />
+  <span style="flex: 1"></span>
+  <button
+    [disabled]="!editTodo"
+    (click)="onDeleteClick()"
+    style="margin: 0.25rem"
+    class="btn btn-secondary"
+  >
+    <span class="material-icons">delete</span>
+  </button>
+  <button
+    [disabled]="
+      (editTodo && editTodo.done) ||
+      titleValue === '' ||
+      descriptionValue === ''
+    "
+    (click)="onSaveClick()"
+    style="margin: 0.25rem"
+    class="btn btn-primary"
+  >
+    Save
+  </button>
+</div>

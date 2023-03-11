@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./assets/styles/variables";
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Oxygen:wght@300;400;700&display=swap");
+@import "material-icons/iconfont/material-icons.css";
+
+* {
+  font-family: "Oxygen", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-color: $color-background;
+}
+
+.btn {
+  height: 40px;
+  min-width: 50px;
+  border-radius: 5px;
+  border: 0 solid transparent;
+  padding: 5px 15px;
+
+  &:disabled {
+    pointer-events: none;
+    background: $button-disabled-background;
+  }
+}
+
+.btn-primary {
+  @include primary-gradient();
+  color: $text-color-primary;
+}
+
+.btn-secondary {
+  border: 3px solid transparent;
+
+  @include secondary-gradient();
+
+  &:hover {
+    border-width: 0;
+    padding: 8px 18px;
+  }
+}

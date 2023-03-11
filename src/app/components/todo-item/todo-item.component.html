@@ -1,0 +1,11 @@
+<div
+  class="container"
+  [ngClass]="{ active: item.active, done: item.done }"
+  (click)="onContainerClick($event)"
+>
+  <div class="title">{{ item.title }}</div>
+  <div class="description">{{ item.description }}</div>
+  <button class="btn btn-done" (click)="onDoneClick(item.id)">
+    <span class="material-icons">done</span>
+  </button>
+</div>
