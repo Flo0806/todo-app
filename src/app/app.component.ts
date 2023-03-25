@@ -23,6 +23,8 @@ export class AppComponent implements OnInit, OnDestroy {
     this.todoSub = this.todoService.TodoSubject.subscribe((data) => {
       this.items = data;
     });
+
+    this.todoService.getTodos();
   }
 
   ngOnDestroy(): void {

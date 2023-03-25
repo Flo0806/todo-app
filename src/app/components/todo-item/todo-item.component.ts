@@ -19,7 +19,7 @@ export class TodoItemComponent {
     this.onItemClick.emit(event);
   }
 
-  onDoneClick(id: number | undefined) {
+  onDoneClick(id: string | undefined) {
     if (id) this.todoService.doneItem(id);
   }
 }
